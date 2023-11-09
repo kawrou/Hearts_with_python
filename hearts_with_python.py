@@ -67,6 +67,18 @@
         # - It depends on the data structure of the players and player's hand
 
 
+#Creates a class of players
+#Initializes the player variables and their empty hand
+class players():
+    def __init__(self):
+        self.player_1 = {}
+        self.player_2 = {}
+        self.player_3 = {}
+        self.player_4 = {}
+        self.players = [player_1, player_2, player_3, player_4]
+
+
+
 
 #PHASE 2
 
