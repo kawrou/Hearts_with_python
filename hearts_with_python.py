@@ -13,7 +13,13 @@
         # Player2 = {a:b, c:d, e:f ...}
         # Player3 = {a:b, c:d, e:f ...}
         # Player4 = {a:b, c:d, e:f ...}
-    #Access the variables directly to get their card value
+    #Access "hand" by calling the variables directly
+    #Returns a dictionary containing cards in hand {suit:value}
+
+    #AND
+    #Have a list containing all the players as variables
+        # Players = [Player1, Player2, Player3, Player4]
+    #Access "hand" by Players[Num] which contains the dict hand {suit:value}
 
     #OR
     #A dicionary with values as a list
@@ -24,6 +30,7 @@
             #           Player4:[hand]
             #           }
     #Access "hand" by calling the key "PlayerNum.values"
+    #Returns a list containing the cards in hand
 
     #OR
     #A dictionary of dictionaries
@@ -32,7 +39,10 @@
     #                   player3 : {hand}, 
     #                   player4 : {hand},
     #                   }
+    #Access "hand" by calling the key "PlayerNum.values"
+    #Returns a dictionary containing cards in hand
 
+#Build Deck Function
 #Build a dictionary called "Deck" that contains all the "suit" / "number" pairs.
     #**How to build this dictionary?**
         #Option 1
@@ -44,15 +54,17 @@
         # - A card_suit list of the 4 suits
         # - Deck is a dictionary of suit:number pairs?
 
-#Shuffle Deck
+#Shuffle Deck Function
         # - Shuffle the dictionary
         # - Fetch all keys from a dictionary as a list
         # - shuffle that list and access dictionary values using shuffled keys
 
-#Build hands 
+#Build hands Function
         # - Each hand should be a dictionary?
-        # - Place suit:number pairs from shuffled deck dictionary to player hands
-        # - 
+        # - Place Cards (suit:number) from shuffled deck dictionary to player hands
+        
+        #** How would the cards be placed into each players hand?**
+        # - It depends on the data structure of the players and player's hand
 
 
 
