@@ -66,7 +66,7 @@
         #** How would the cards be placed into each players hand?**
         # - It depends on the data structure of the players and player's hand
 
-
+#Build players
 #Creates a class of players
 #Initializes the player variables and their empty hand
 class players():
@@ -77,17 +77,22 @@ class players():
         self.player_4 = []
         self.players = [player_1, player_2, player_3, player_4]
 
+#Build deck function
 #A function to make a list of a full deck of cards with suit/number pairs in individual dicts
 #Should return a list to whatever called it. 
-#def make_deck():
-deck = []
-suits = ["♦", "♣", "♥", "♠"]
-for suit in suits:
-    for num in range(1,14):
-        deck.append({suit:num})
-print(deck)
+def make_deck():
+    deck = []
+    suits = ["♦", "♣", "♥", "♠"]
+    for suit in suits:
+        for num in range(1,14):
+            deck.append({suit:num})
+    return deck
 
-
+#Shuffle Deck function
+#A function that calls upon the make_deck() function to retrieve a deck of cards and then shuffle it
+#Should return a shuffled list to whatever called it. 
+def shuffle_deck(deck):
+    return deck
 
 
 
