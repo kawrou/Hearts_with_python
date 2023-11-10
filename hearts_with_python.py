@@ -66,12 +66,6 @@
         #** How would the cards be placed into each players hand?**
         # - It depends on the data structure of the players and player's hand
 
-player1 = []
-player2 = []
-player3 = []
-player4 = []
-players = [player1, player2, player3, player4]
-
 #Build players
 #Creates a class of players
 #Initializes the player variables and their empty hand
@@ -81,39 +75,39 @@ class players():
         self.player_2 = []
         self.player_3 = []
         self.player_4 = []
-        self.players = [player_1, player_2, player_3, player_4]
+        self.players = [self.player_1, self.player_2, self.player_3, self.player_4]
 
 #Build deck function
 #A function to make a list of a full deck of cards with suit/number pairs in individual dicts
 #Should return a list to whatever called it. 
-def make_deck():
-    deck = []
-    suits = ["♦", "♣", "♥", "♠"]
-    for suit in suits:
-        for num in range(1,14):
-            deck.append({suit:num})
-    return deck
+    def make_deck(self):
+        deck = []
+        suits = ["♦", "♣", "♥", "♠"]
+        for suit in suits:
+            for num in range(1,14):
+                deck.append({suit:num})
+        return deck
 
 #Shuffle Deck function
 #A function that calls upon the make_deck() function to retrieve a deck of cards and then shuffle it
 #Should return a shuffled list to whatever called it. 
-def shuffle_deck():
-    import random
-    deck = make_deck()
-    random.shuffle(deck)
-    return(deck)
+    def shuffle_deck(self):
+        import random
+        deck = self.make_deck()
+        random.shuffle(deck)
+        return(deck)
 
 #Build Hand Function
 #A function that distributes the items in list from shuffle_deck()func to players
 #Players should have a list of 13 dicts of key:value pairs. 
 
-def distribute_hand():
-    shuffled_deck = shuffle_deck()
-    #print(shuffled_deck[0])
-    for player in players:
-        for i in range(0,13):
-            player.append(shuffled_deck[0])
-            del shuffled_deck[0]
+    def distribute_hand(self):
+        shuffled_deck = self.shuffle_deck()
+        #print(shuffled_deck[0])
+        for player in self.players:
+            for i in range(0,13):
+                player.append(shuffled_deck[0])
+                del shuffled_deck[0]
             
 
 
