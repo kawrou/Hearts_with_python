@@ -91,11 +91,22 @@ def make_deck():
 #Shuffle Deck function
 #A function that calls upon the make_deck() function to retrieve a deck of cards and then shuffle it
 #Should return a shuffled list to whatever called it. 
-def shuffle_deck(deck):
+def shuffle_deck():
     import random
+    deck = make_deck()
     random.shuffle(deck)
-    return deck
+    print(deck)
 
+#Build Hand Function
+#A function that distributes the items in list from shuffle_deck()func to players
+#Players should have a list of 13 dicts of key:value pairs. 
+
+def distribute_hand():
+    hand = shuffle_deck()
+    print(hand)
+    #for player in players:
+    #    for i in range(1,14):
+    #        shuffled
 
 
 
