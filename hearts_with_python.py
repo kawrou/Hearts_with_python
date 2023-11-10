@@ -71,11 +71,23 @@
 #Initializes the player variables and their empty hand
 class players():
     def __init__(self):
-        self.player_1 = {}
-        self.player_2 = {}
-        self.player_3 = {}
-        self.player_4 = {}
+        self.player_1 = []
+        self.player_2 = []
+        self.player_3 = []
+        self.player_4 = []
         self.players = [player_1, player_2, player_3, player_4]
+
+#A function to make a list of a full deck of cards with suit/number pairs in individual dicts
+#Should return a list to whatever called it. 
+#def make_deck():
+deck = []
+suits = ["♦", "♣", "♥", "♠"]
+for suit in suits:
+    for num in range(1,14):
+        deck.append({suit:num})
+print(deck)
+
+
 
 
 
