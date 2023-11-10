@@ -91,8 +91,13 @@ def make_deck():
 #Shuffle Deck function
 #A function that calls upon the make_deck() function to retrieve a deck of cards and then shuffle it
 #Should return a shuffled list to whatever called it. 
-def shuffle_deck(deck):
-    return deck
+#def shuffle_deck(deck):
+#    return deck
+import random
+deck = make_deck()
+print(deck)
+random.shuffle(deck)
+print(deck)
 
 
 
