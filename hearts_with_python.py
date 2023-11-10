@@ -66,6 +66,12 @@
         #** How would the cards be placed into each players hand?**
         # - It depends on the data structure of the players and player's hand
 
+player1 = []
+player2 = []
+player3 = []
+player4 = []
+players = [player1, player2, player3, player4]
+
 #Build players
 #Creates a class of players
 #Initializes the player variables and their empty hand
@@ -101,17 +107,13 @@ def shuffle_deck():
 #A function that distributes the items in list from shuffle_deck()func to players
 #Players should have a list of 13 dicts of key:value pairs. 
 
-player1 = []
-player2 = []
-player3 = []
-player4 = []
-players = [player1, player2, player3, player4]
-
 def distribute_hand():
     shuffled_deck = shuffle_deck()
     #print(shuffled_deck[0])
     for player in players:
-        player.append(shuffled_deck[0])
+        for i in range(0,13):
+            player.append(shuffled_deck[0])
+            del shuffled_deck[0]
             
 
 
