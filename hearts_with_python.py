@@ -110,6 +110,16 @@ class players():
                 del shuffled_deck[0]
             
 
+game_start = players()
+game_start.distribute_hand()
+print("Player 1's hand")
+print(game_start.player_1) 
+print("Player 2's hand")
+print(game_start.player_2)
+print("Player 3's hand")
+print(game_start.player_3)
+print("Player 4's hand")
+print(game_start.player_4)
 
 
 
