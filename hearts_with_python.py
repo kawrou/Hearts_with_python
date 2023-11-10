@@ -95,18 +95,24 @@ def shuffle_deck():
     import random
     deck = make_deck()
     random.shuffle(deck)
-    print(deck)
+    return(deck)
 
 #Build Hand Function
 #A function that distributes the items in list from shuffle_deck()func to players
 #Players should have a list of 13 dicts of key:value pairs. 
 
+player1 = []
+player2 = []
+player3 = []
+player4 = []
+players = [player1, player2, player3, player4]
+
 def distribute_hand():
-    hand = shuffle_deck()
-    print(hand)
-    #for player in players:
-    #    for i in range(1,14):
-    #        shuffled
+    shuffled_deck = shuffle_deck()
+    #print(shuffled_deck[0])
+    for player in players:
+        player.append(shuffled_deck[0])
+            
 
 
 
