@@ -125,9 +125,81 @@ print(game_start.player_4)
 
 
 #PHASE 2
+#PLAYING CARDS FROM HAND
+#Remember all the cards are stored as instance variables so will need to be called from the class
+
+"""
+print("Choose a suit")
+player_suit = input()
+
+for cards in game_start.player_1:
+    if '♣' in cards.keys():
+        print("Has suit")
+"""
+
+#Some code to display suit choices to user
+suits = ["♦", "♣", "♥", "♠"]
+print("Choose a suit (type a number)")
+for count, suit in enumerate(suits):
+    print(f"{count+1}) {suit}")
+
+#Player inputs their choice of suit
+player_suit_choice = input()
+
+#Prompt user for number choice
+print("Pick a number between 1 and 13 (type a number)")
+player_number_choice = input()
+
+#Shows player's suit and number choice after selection
+print(f" You chose {suits[int(player_suit_choice)-1]} : {player_number_choice}")
+
+
+#Player Choose Card
+    #A prompt from the terminal asking player to choose suit 
+    #From a list!!
+        #If suit exists in hand
+            #Display cards with only that suit
+        #Else
+            #print "You don't have that suit in hand"
+            #Start suit_choice prompt again
+    #A prompt for the terminal asking player to choose a number
+        #If number in temp list
+            #Display the suit:number card
+            #Ask if user wishes to play that card
+                #Add chosen card to current round list
+            #Else start from beginning
+        #Else:
+            #Print "You don't have that number in hand"
+            #Start from choosing number again. 
+
+        #Remove card from players hand
+
+#Bot play card
+    #FOR NOW - just remove first card from hand to test if can add to current round list
+
+#Collecting all the played cards in a list forming the "trick" of the round
+    #Maybe call this list "cards_played"
+
 
 
 #PHASE 3
+#BASIC RULES
+#Probably will need a function called play_round
 
+#Check "game_start.players" list for the 2 of clubs
+    #That player will be the first player in player order
+    #Subsequent players will be next 
+
+#Player order
+    #Put players in a list. 
+
+#Players must follow suit
+    #Check hand
+        #If hand has suit in "cards_played"
+            #Then can only play those cards
+        #Otherwise can play any higher card
+
+#Check winner of round
+    #
 
 #PHASE 4
