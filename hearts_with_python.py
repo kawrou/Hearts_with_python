@@ -144,14 +144,20 @@ for count, suit in enumerate(suits):
     print(f"{count+1}) {suit}")
 
 #Player inputs their choice of suit
-player_suit_choice = input()
+player_suit_input = input()
 
 #Prompt user for number choice
 print("Pick a number between 1 and 13 (type a number)")
-player_number_choice = input()
+player_number_input = input()
 
 #Shows player's suit and number choice after selection
-print(f" You chose {suits[int(player_suit_choice)-1]} : {player_number_choice}")
+print(f" You chose {suits[int(player_suit_input)-1]} : {player_number_input}")
+
+player_choice = {suits[int(player_suit_input)-1] : int(player_number_input)}
+
+for cards in game_start.player_1:
+    if player_choice == cards:
+        print("Valid Choice")
 
 
 #Player Choose Card
